@@ -2,7 +2,7 @@
 lazy val flywayAwsLambda = (project in file(".")).settings(
   organization := "crossroad0201.aws",
   name := "flyway-awslambda",
-  version := "0.3.3",
+  version := "0.3.4",
   scalaVersion := "2.12.0",
 
   assemblyJarName := s"${name.value}-${version.value}.jar",
@@ -12,6 +12,7 @@ lazy val flywayAwsLambda = (project in file(".")).settings(
     // Flyway
     "org.flywaydb" % "flyway-core" % "4.0.3",
     "mysql" % "mysql-connector-java" % "6.0.5", // Flyway supports only Ver.6 higher.
+    "org.postgresql" % "postgresql" % "42.2.6"
 
     // AWS
     "com.amazonaws" % "aws-lambda-java-core" % "1.1.0",
